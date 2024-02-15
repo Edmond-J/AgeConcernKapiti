@@ -1,0 +1,93 @@
+<img
+  class="custom-float-button hide-in-mobile"
+  id="tts-button"
+  onclick="toggleReadAloud()"
+  src="https://staging4.ageconcernkapiti.co.nz/wp-content/uploads/2024/02/listen-open.svg"
+  alt="speak open"
+  width="42px"
+  style="
+    position: fixed;
+    top: 35%;
+    right: 0;
+    z-index: 1000;
+    background: #e2e2e2;
+  "
+/>
+
+<div
+  id="ra-player"
+  class="draggable"
+  style="
+    position: fixed;
+    top: 30%;
+    right: 10px;
+    z-index: -1000;
+    cursor: move;
+    opacity: 0.8;
+    display: none;
+  "
+  data-skin="https://assets.readaloudwidget.com/embed/skins/default"
+></div>
+
+<script>
+  let isDragging = false;
+  let offsetX, offsetY;
+  document.getElementById("ra-player").addEventListener("mousedown", startDrag);
+  document.addEventListener("mousemove", drag);
+  document.addEventListener("mouseup", endDrag);
+  function startDrag(event) {
+    isDragging = true;
+    offsetX = event.clientX - event.target.getBoundingClientRect().left;
+    offsetY = event.clientY - event.target.getBoundingClientRect().top;
+  }
+
+  function drag(event) {
+    if (isDragging) {
+      let x = event.clientX - offsetX;
+      let y = event.clientY - offsetY;
+      document.getElementById("ra-player").style.left = x + "px";
+      document.getElementById("ra-player").style.top = y + "px";
+    }
+  }
+
+  function endDrag() {
+    isDragging = false;
+  }
+</script>
+
+<audio
+  id="ra-audio"
+  data-lang="en-US"
+  data-voice="free"
+  data-key="778af4731e0f5251663c02a6752719ef"
+></audio>
+<script>
+  // Function to toggle between displaying the player and hiding it
+  function toggleReadAloud() {
+    var audio = document.getElementById("ra-audio");
+    var player = document.getElementById("ra-player");
+    if (player.style.display === "none") {
+      player.style.display = "flex";
+      // Update the button text or icon accordingly
+      document.getElementById("tts-button").src =
+        "https://staging4.ageconcernkapiti.co.nz/wp-content/uploads/2024/02/listen-hide.svg";
+      readAloud(audio, player);
+    } else {
+      // If player is visible, hide it.
+      player.style.display = "none";
+      // Update the button text or icon accordingly
+      document.getElementById("tts-button").src =
+        "https://staging4.ageconcernkapiti.co.nz/wp-content/uploads/2024/02/listen-open.svg";
+    }
+  }
+  function readAloud(e, n) {
+    var s = "https://assets.readaloudwidget.com/embed/";
+    var t = document.createElement("script");
+    t.onload = function () {
+      readAloudInit(e, n);
+    };
+
+    t.src = s + "js/readaloud.min.js";
+    document.head.appendChild(t);
+  }
+</script>
