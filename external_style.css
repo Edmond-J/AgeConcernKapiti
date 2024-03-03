@@ -1,5 +1,6 @@
-/*  top header text - hide in mobile */
-@media screen and (max-width: 767px) and (orientation: portrait) {
+/* below is added by Vuw Student Team */
+/* top header text - hide in mobile */
+@media screen and (max-width: 960px) and (orientation: portrait) {
     .hide-in-mobile {
       display: none;
     }
@@ -15,12 +16,19 @@
   /* button round corner */
   input[type="button"],
   input[type="submit"],
-  button,
+  
   .wp-block-button
   .wp-element-button, 
   .wp-block-button__link{
-      border-radius: 10px;
+      border-radius: 15px;
+      color:white;
+      background: var(--nv-primary-accent)
   }
+  
+  /* breadcrumb - remove  */
+  /* .breadcrumb_last{
+      display:none;
+  } */
   
   /* Change link color to Cyan (PMS 2995C) */
   a {
@@ -28,7 +36,10 @@
       transition: transform 0.3s ease;
   }
   
-  /* Home title - hide*/
+  /* Removed Home from the homepage*/
+  /* body.home h1 {
+    display: none;
+  } */
   .page-id-9242 .nv-page-title  h1{
       display: none;
   }
@@ -62,20 +73,21 @@
   }
   
   /* footer logo mobile - hide*/
-  @media screen and (max-width: 1024px) and (orientation: portrait) {
+  @media screen and (max-width: 767px) and (orientation: portrait) {
     .wp-image-7729 {
       display: none;
     }
   }
   
   /* paragraph font size on mobile - larger  */
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 960px) {
     p {
-          font-size: 22px;
-          line-height:3;
+          font-size: 20px;
+          line-height: 1.6;
     }
   }
   
+  /* link inside paragraph - hover effect */
   p a {
       text-decoration:none;
     background-image: linear-gradient(var(--nv-site-bg) 50%, #00a7e0 50%);
@@ -103,11 +115,17 @@
   }
   
   /* font size toggle button on mobile- move up */
-  @media screen and (max-width: 1024px) and (orientation: portrait) {
+  @media screen and (max-width: 960px) and (orientation: portrait) {
   .a11y-toolbar{
       top: 66vh;
   }
   }
+  /* primary-menu navigation list hover */
+  /* 
+  #nv-primary-navigation-bottom li li:hover{
+      background-color: #37C5F0;
+      border-bottom: 1px solid white;
+  } */
   
   /* font toggle */
   .fontsize main p, .fontsize main li, .fontsize main span{
@@ -116,8 +134,8 @@
   }
   
   .fontsize .o-posts-grid-post-meta {
-      font-size: 18px !important;
-      line-height: 1.5 !important;
+      font-size: 20px !important;
+      line-height: 1.6 !important;
   }
   /* home page post block- evenly divide */
   .wp-block-themeisle-blocks-posts-grid .is-grid.o-posts-grid-columns-2{
@@ -125,7 +143,7 @@
   }
   
   /* home page post block- responsive */
-  @media screen and (max-width: 767px) and (orientation: portrait) {
+  @media screen and (max-width: 576px) and (orientation: portrait) {
   .wp-block-themeisle-blocks-posts-grid .is-grid.o-posts-grid-columns-2{
       grid-template-columns:1fr;
   }
@@ -149,5 +167,50 @@
   .hamburger--vortex{
       height: 3em;
       border-radius:15px;
+  }
+  
+  /* home 3 cards - align to top */
+  .wp-block-themeisle-blocks-advanced-columns.has-vertical-center>.innerblocks-wrap{
+      margin-top: 30px;
+      align-items: self-start
+  }
+  
+  /* home 3 cards - display vertically */
+  @media (max-width: 960px){
+      .wp-block-themeisle-blocks-advanced-columns .innerblocks-wrap{
+      display:block
+   }
+  }
+  
+  /* membership donation button - fixed width */
+  .wp-block-buttons>.wp-block-button.has-custom-width .wp-block-button__link{
+      width:220px
+  }
+  
+  /* footer donation button - position*/
+  #donation-mobile-footer{
+      position:absolute;
+      bottom: 80px;
+          right: 10px;
+      text-wrap: none;
+      line-height: 24px
+  }
+  
+  /* footer donation button - hide in desktop */
+  @media screen and (min-width: 960px) and (orientation: landscape) {
+      #donation-mobile-footer{
+      display: none
+      }
+  }
+  
+  /* form label - bold */
+  .otter-form-input-label{
+      font-weight: bold;
+  }
+  
+  /* footer widget - adjust width to avoid text wrap */
+  .footer-top-inner .row{
+  grid-template-columns : 1fr 0.5fr 1fr 0.5fr 1fr;
+  --valign: center
   }
   
