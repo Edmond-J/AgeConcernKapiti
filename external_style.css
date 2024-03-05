@@ -1,216 +1,307 @@
+/* Make submenu above Events Date & List menu boxes */
+.row .primary-menu-ul .sub-menu {
+	z-index:205;
+}
+
+/* center submenu */
+.row .primary-menu-ul > .menu-item-has-children > .sub-menu {
+    right: -35px;
+}
+/* Border above footer */
+.site-footer {border-top: solid 3px #00aac7;}
+
+/* space above bottom footer */
+.footer-top, .footer-bottom {
+	margin-top: 20px;
+}
+/* a:hover{
+	color: #a7228b;
+}
+ */
+
+/* align text in Top Bar */
+.nv-html-content{text-align: right;}
+
+/* make Contact form 100% wide */
+
+.page-id-2774 label,
+.page-id-45 label {
+    display: block;
+}
+
+.page-id-2774 input, 
+.page-id-2774 textarea,
+.page-id-45 input, 
+.page-id-45 textarea{ 
+	width: 100% !important;
+}
+/* adjust sidebar on home page */
+.home.page .nv-sidebar-wrap {
+	margin-top: 570px;
+}
+
+/* H1 Headings adjust colour */
+h1{
+/* 	color: #42ba85; */
+/* 	-webkit-text-stroke: 1px #2F855F; */
+/* 	color: var(--nv-secondary-accent); */
+/* 	text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);  */
+}
+
+/* Hide Neve promo */
+.nv-footer-content .hfg-slot.left .builder-item {
+	display: none;
+}
+/* show copywrite */
+.nv-footer-content .hfg-slot.left .builder-item.desktop-left.tablet-left.mobile-left {
+	display: block;
+}
+
+/* adjust 3rd footer widget*/
+.hfg-slot.center .builder-item.desktop-left.tablet-left.mobile-left {
+	margin-top: 0;
+}
+.nv-footer-content .hfg-slot.center {
+    justify-content: initial;
+}
+
+/* adjust social icons */
+@media only screen and (min-width: 1025px)
+{
+	.mystickyelements-fixed ul li.mystickyelements-minimize {
+	display:none;
+	}
+
+	#mystickyelements-social-facebook {
+		margin-left: 10px;
+	}
+}
+.mystickyelements-fixed {
+	top: 300px;
+}
+
 /* below is added by Vuw Student Team */
 /* top header text - hide in mobile */
 @media screen and (max-width: 960px) and (orientation: portrait) {
-    .hide-in-mobile {
-      display: none;
-    }
-  }
-  
-  /* top header icons - vertically center */
-  .header-icon-holder{
-      display:flex;
-      align-items: center;
-      justify-content: center;
-  }
-  
-  /* button round corner */
-  input[type="button"],
-  input[type="submit"],
-  
-  .wp-block-button
-  .wp-element-button, 
-  .wp-block-button__link{
-      border-radius: 15px;
-      color:white;
-      background: var(--nv-primary-accent)
-  }
-  
-  /* breadcrumb - remove  */
-  /* .breadcrumb_last{
-      display:none;
-  } */
-  
-  /* Change link color to Cyan (PMS 2995C) */
-  a {
-      color: #00a7e0; /* RGB: 0, 167, 224 */
-      transition: transform 0.3s ease;
-  }
-  
-  /* Removed Home from the homepage*/
-  /* body.home h1 {
+  .hide-in-mobile {
     display: none;
-  } */
-  .page-id-9242 .nv-page-title  h1{
-      display: none;
   }
-  
-  /* About us title - hide*/
-  .page-id-7794 h1{
-      display: none;
+}
+
+/* top header icons - vertically center */
+.header-icon-holder{
+	display:flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* button round corner */
+input[type="button"],
+input[type="submit"],
+
+.wp-block-button
+.wp-element-button, 
+.wp-block-button__link{
+	border-radius: 15px;
+	color:white;
+	background: var(--nv-primary-accent)
+}
+
+/* breadcrumb - remove  */
+/* .breadcrumb_last{
+	display:none;
+} */
+
+/* Change link color to Cyan (PMS 2995C) */
+a {
+    color: #00a7e0; /* RGB: 0, 167, 224 */
+	transition: transform 0.3s ease;
+}
+
+/* Removed Home from the homepage*/
+/* body.home h1 {
+  display: none;
+} */
+.page-id-9242 .nv-page-title  h1{
+	display: none;
+}
+
+/* About us title - hide*/
+.page-id-7794 h1{
+	display: none;
+}
+
+/* Contact us title - hide */
+.page-id-2774 h1{
+	display:none;
+}
+
+/*home page card - border */
+.elementor-element-73334c4 .elementor-element-populated {
+	border: 1pt solid var(--nv-text-color); 
+	margin:5px;
+}
+
+/* home page card - padding */
+.elementor-element-73334c4 .elementor-column-gap-wide>.elementor-column>.elementor-element-populated {
+    padding: 0px;
+}
+
+/* home page card - text margin */
+.elementor-element-73334c4 .elementor-col-33>.elementor-element-populated>.elementor-widget-text-editor{
+	margin-left:10px;
+	margin-right:10px;
+	color: var(--nv-text-color)
+}
+
+/* footer logo mobile - hide*/
+/* @media screen and (max-width: 576px) and (orientation: portrait) {
+  .wp-image-7729 {
+    display: none;
   }
-  
-  /* Contact us title - hide */
-  .page-id-2774 h1{
-      display:none;
+} */
+
+/* paragraph font size on mobile - larger  */
+@media screen and (max-width: 960px) {
+  p {
+		font-size: 20px;
+		line-height: 1.6;
   }
-  
-  /*home page card - border */
-  .elementor-element-73334c4 .elementor-element-populated {
-      border: 1pt solid var(--nv-text-color); 
-      margin:5px;
-  }
-  
-  /* home page card - padding */
-  .elementor-element-73334c4 .elementor-column-gap-wide>.elementor-column>.elementor-element-populated {
-      padding: 0px;
-  }
-  
-  /* home page card - text margin */
-  .elementor-element-73334c4 .elementor-col-33>.elementor-element-populated>.elementor-widget-text-editor{
-      margin-left:10px;
-      margin-right:10px;
-      color: var(--nv-text-color)
-  }
-  
-  /* footer logo mobile - hide*/
-  @media screen and (max-width: 767px) and (orientation: portrait) {
-    .wp-image-7729 {
-      display: none;
-    }
-  }
-  
-  /* paragraph font size on mobile - larger  */
-  @media screen and (max-width: 960px) {
-    p {
-          font-size: 20px;
-          line-height: 1.6;
-    }
-  }
-  
-  /* link inside paragraph - hover effect */
-  p a {
-      text-decoration:none;
-    background-image: linear-gradient(var(--nv-site-bg) 50%, #00a7e0 50%);
-    background-size: auto 190%;
-    transition: background 0.3s ease-in-out;
-  }
-  
-  /* link inside p hover */
-  p a:hover {
-      color: var(--nv-text-color);
-      text-decoration:none;
-    background-position-y: 100%;
-  }
-  
-  /* link on click */
-  a:active {
-     transform: scale(0.9); 
-  }
-  
-  /* newsletter cover - same size */
-  .page-id-7770 .attachment-medium.size-medium{
-      width:300px;
-      height:350px;
-      border: 2px solid var(--nv-text-color)
-  }
-  
-  /* font size toggle button on mobile- move up */
-  @media screen and (max-width: 960px) and (orientation: portrait) {
-  .a11y-toolbar{
-      top: 66vh;
-  }
-  }
-  /* primary-menu navigation list hover */
-  /* 
-  #nv-primary-navigation-bottom li li:hover{
-      background-color: #37C5F0;
-      border-bottom: 1px solid white;
-  } */
-  
-  /* font toggle */
-  .fontsize main p, .fontsize main li, .fontsize main span{
-      font-size: 26px !important;
-      line-height: 1.6 !important;
-  }
-  
-  .fontsize .o-posts-grid-post-meta {
-      font-size: 20px !important;
-      line-height: 1.6 !important;
-  }
-  /* home page post block- evenly divide */
-  .wp-block-themeisle-blocks-posts-grid .is-grid.o-posts-grid-columns-2{
-      grid-template-columns:1fr 1fr;
-  }
-  
-  /* home page post block- responsive */
-  @media screen and (max-width: 576px) and (orientation: portrait) {
-  .wp-block-themeisle-blocks-posts-grid .is-grid.o-posts-grid-columns-2{
-      grid-template-columns:1fr;
-  }
-  }
-  
-  /* All Posts page post items - underline */
-  .page-id-9313 .o-posts-grid-post{
-      border-bottom: 1px solid gray !important;
-  }
-  
-  /* post items meta - italic */
-  .o-posts-grid-post-meta{
-      font-style: italic;
-  }
-  
-  p, main li, main span, h2, h3, h4, h5, h6{
-  color:var(--nv-text-color);
-  }
-  
-  /* home page hamburger button - height*/
-  .hamburger--vortex{
-      height: 3em;
-      border-radius:15px;
-  }
-  
-  /* home 3 cards - align to top */
-  .wp-block-themeisle-blocks-advanced-columns.has-vertical-center>.innerblocks-wrap{
-      margin-top: 30px;
-      align-items: self-start
-  }
-  
-  /* home 3 cards - display vertically */
-  @media (max-width: 960px){
-      .wp-block-themeisle-blocks-advanced-columns .innerblocks-wrap{
-      display:block
-   }
-  }
-  
-  /* membership donation button - fixed width */
-  .wp-block-buttons>.wp-block-button.has-custom-width .wp-block-button__link{
-      width:220px
-  }
-  
-  /* footer donation button - position*/
-  #donation-mobile-footer{
-      position:absolute;
-      bottom: 80px;
-          right: 10px;
-      text-wrap: none;
-      line-height: 24px
-  }
-  
-  /* footer donation button - hide in desktop */
-  @media screen and (min-width: 960px) and (orientation: landscape) {
-      #donation-mobile-footer{
-      display: none
-      }
-  }
-  
-  /* form label - bold */
-  .otter-form-input-label{
-      font-weight: bold;
-  }
-  
-  /* footer widget - adjust width to avoid text wrap */
-  .footer-top-inner .row{
-  grid-template-columns : 1fr 0.5fr 1fr 0.5fr 1fr;
-  --valign: center
-  }
-  
+}
+
+/* link inside paragraph - hover effect */
+p a {
+	text-decoration:none;
+  background-image: linear-gradient(var(--nv-site-bg) 50%, #00a7e0 50%);
+  background-size: auto 190%;
+  transition: background 0.3s ease-in-out;
+}
+
+/* link inside p hover */
+p a:hover {
+	color: var(--nv-text-color);
+	text-decoration:none;
+  background-position-y: 100%;
+}
+
+/* link on click */
+a:active {
+   transform: scale(0.9); 
+}
+
+/* newsletter cover - same size */
+.page-id-7770 .attachment-medium.size-medium{
+	width:300px;
+	height:350px;
+	border: 2px solid var(--nv-text-color)
+}
+
+/* font size toggle button on mobile- hidden*/
+@media (max-width: 576px) {
+ .a11y-toolbar{
+	display:none;
+ }
+}
+/* primary-menu navigation list hover */
+/* 
+#nv-primary-navigation-bottom li li:hover{
+	background-color: #37C5F0;
+	border-bottom: 1px solid white;
+} */
+
+/* font toggle */
+.fontsize main p, .fontsize main li, .fontsize main span{
+	font-size: 26px !important;
+	line-height: 1.6 !important;
+}
+
+.fontsize .o-posts-grid-post-meta {
+	font-size: 20px !important;
+	line-height: 1.6 !important;
+}
+/* home page post block- evenly divide */
+.wp-block-themeisle-blocks-posts-grid .is-grid.o-posts-grid-columns-2{
+	grid-template-columns:1fr 1fr;
+}
+
+/* home page post block- responsive */
+@media screen and (max-width: 576px) and (orientation: portrait) {
+.wp-block-themeisle-blocks-posts-grid .is-grid.o-posts-grid-columns-2{
+	grid-template-columns:1fr;
+}
+}
+
+/* All Posts page post items - underline */
+.page-id-9313 .o-posts-grid-post{
+	border-bottom: 1px solid gray !important;
+}
+
+/* post items meta - italic */
+.o-posts-grid-post-meta{
+	font-style: italic;
+}
+
+p, main li, main span, h2, h3, h4, h5, h6{
+color:var(--nv-text-color);
+}
+
+/* home page hamburger button - height*/
+.hamburger--vortex{
+	height: 3em;
+	border-radius:15px;
+}
+
+/* home 3 cards - align to top */
+.wp-block-themeisle-blocks-advanced-columns.has-vertical-center>.innerblocks-wrap{
+	margin-top: 30px;
+	align-items: self-start
+}
+
+/* home 3 cards - display vertically */
+@media (max-width: 960px){
+	.wp-block-themeisle-blocks-advanced-columns .innerblocks-wrap{
+	display:block
+ }
+}
+
+/* membership donation button - fixed width */
+.wp-block-buttons>.wp-block-button.has-custom-width .wp-block-button__link{
+	width:220px
+}
+
+/* footer donation button - position*/
+#donation-mobile-footer{
+	position:absolute;
+	bottom: 80px;
+	    right: 30px;
+	text-wrap: none;
+	line-height: 24px
+}
+
+/* footer donation button - hide in desktop */
+@media (min-width: 960px) {
+	#donation-mobile-footer{
+	display: none
+	}
+}
+
+/* form label - bold */
+.otter-form-input-label{
+	font-weight: bold;
+}
+
+/* footer widget - adjust width to avoid text wrap */
+.footer-top-inner .row{
+grid-template-columns : 1fr 0.5fr 1fr 0.5fr 1fr;
+--valign: center
+}
+
+/* remove the space between the blue line and the footer background */
+.footer-top, .footer-bottom{
+	margin:0;
+}
+
+/*  footer background - leave some space to the bottom */
+#block-43{
+	margin-bottom:20px
+}
